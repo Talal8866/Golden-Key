@@ -13,7 +13,7 @@ interface ContactForm {
   selector: 'app-contact',
   imports: [RouterLink, FormsModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  styleUrl: './contact.scss',
 })
 export class Contact {
  submitted = signal(false);

@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './service-area.html',
-  styleUrl: './service-area.css',
+  styleUrl: './service-area.scss',
 })
 export class ServiceArea {
  primaryAreas = [

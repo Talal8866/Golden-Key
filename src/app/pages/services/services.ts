@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './services.html',
-  styleUrl: './services.css',
+  styleUrl: './services.scss',
 })
 export class Services {
   services = [

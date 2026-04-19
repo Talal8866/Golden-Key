@@ -1,59 +1,134 @@
-# GoldenKey
+# Golden Key Lock Repairing EST — Angular Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+Full 5-page static Angular 20 website built from the company profile PDF.
 
-## Development server
+## Brand
+- **Gold:** `#B8861B` | **Charcoal:** `#3A3A3A` | **White/Off-white:** `#F7F6F4`
+- **Font Display:** Playfair Display | **Font Body:** Nunito (loaded from Google Fonts via styles.scss)
+- **Design motif:** circular image frames, gold accent lines, gold/charcoal hero sections
 
-To start a local development server, run:
+---
+
+## Pages Delivered
+
+| Route           | Component              | Description                                      |
+|-----------------|------------------------|--------------------------------------------------|
+| `/`             | HomeComponent          | Hero, stats, 6 service cards, Why Us, clients, CTA |
+| `/about`        | AboutComponent         | Who We Are, Vision/Mission, Core Values, Timeline, Clients |
+| `/services`     | ServicesComponent      | 6 detailed service sections, roadside partners, retail shop |
+| `/service-area` | ServiceAreaComponent   | Coverage map, 12 Dubai areas, response times     |
+| `/contact`      | ContactComponent       | Info cards, enquiry form, Google Maps embed      |
+
+---
+
+## Drop-In Instructions
+
+You have an **existing Angular 20 project**. Just copy these files into it:
+
+### Step 1 — Replace / create source files
+
+```
+YOUR_PROJECT/
+├── src/
+│   ├── index.html         
+│   ├── main.ts            
+│   ├── styles.scss        
+│   └── app/
+│       ├── app.component.ts  
+│       ├── app.config.ts     
+│       ├── app.routes.ts     
+│       ├── components/
+│       │   ├── navbar/
+│       │   │   ├── navbar.component.ts
+│       │   │   ├── navbar.component.html
+│       │   │   └── navbar.component.scss
+│       │   └── footer/
+│       │       ├── footer.component.ts
+│       │       ├── footer.component.html
+│       │       └── footer.component.scss
+│       └── pages/
+│           ├── home/
+│           ├── about/
+│           ├── services/
+│           ├── service-area/
+│           └── contact/
+```
+
+### Step 2 — Make sure angular.json points to scss
+
+In your existing `angular.json`, confirm:
+```json
+"inlineStyleLanguage": "scss",
+"styles": ["src/styles.scss"]
+```
+
+### Step 3 — Run
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open `http://localhost:4200`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Angular 20 Compatibility Notes
 
-```bash
-ng generate component component-name
-```
+- All components are **standalone** (`standalone: true`) — no NgModules needed
+- Uses `@for` and `@if` control flow (Angular 17+ syntax)
+- Uses `signal()` in Navbar (scroll) and Contact (form submission)
+- `RouterLink`, `RouterLinkActive` imported directly in each component
+- `FormsModule` imported only in ContactComponent (two-way binding on form)
+- `withViewTransitions()` in app.config for smooth page transitions
+- `withInMemoryScrolling({ scrollPositionRestoration: 'top' })` — pages always start at top
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## What Each Page Contains
 
-## Building
+### Home (`/`)
+- Full-screen animated hero with floating cards
+- Stats strip: 35+ Years | 24/7 | 10K+ Customers | Licensed
+- 6 service cards with icon, title, description, link
+- "Why Golden Key" dark section with 4 value cards
+- Trusted clients marquee (Emirates Airlines, MERAS, etc.)
+- Gold gradient CTA band with phone numbers
 
-To build the project run:
+### About (`/about`)
+- Who We Are section with SVG illustration + stat card
+- Vision & Mission side-by-side dark cards
+- 4 Core Values grid: Timely | Efficiency | Trust | Reliability
+- Company timeline: 1989 → 2024
+- Notable clients grid (5 companies)
 
-```bash
-ng build
-```
+### Services (`/services`)
+- Sticky service nav band (scroll spy anchors)
+- 6 detailed service articles with features list + "Book" CTA:
+  Car Opening · Car Key Programming · Lock Installation ·
+  Safe Box Opening · Residential Door Opening · Electronic Locks
+- Roadside assistance section with 8 automotive brand partners
+- Retail shop product grid (16 items)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Service Area (`/service-area`)
+- SVG Dubai coverage map with animated zone rings
+- Intro text with 6 service type chips
+- 12 Dubai area cards with descriptions
+- Response time cards (~15 min / ~25 min / 24/7)
+- Direct call CTA buttons
 
-## Running unit tests
+### Contact (`/contact`)
+- Red emergency banner with pulsing dot + direct phone links
+- 4 info cards: Mobile | Landline/Fax | Email | Address
+- Working hours: 24/7 Every Day
+- Enquiry form: Name, Phone, Email, Service select, Message
+- Success state after form submission
+- Google Maps iframe embed for Al Karama shop location
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contact Details (from PDF)
+- **Mobile:** 0506512422 / 0507751708
+- **Landline:** 043350177 | **Fax:** 043355583
+- **Email:** goldenkey89@hotmail.com
+- **Address:** Next to Families Supermarket, Al Kwuait Street, Al Karama, Dubai, U.A.E.
+- **Est.:** 1989
