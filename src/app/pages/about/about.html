@@ -1,0 +1,174 @@
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <span class="section-label">Our Story</span>
+    <h1>About <span>Golden Key</span></h1>
+    <p>A trusted Dubai locksmith for over 35 years — built on integrity, expertise, and a genuine commitment to your security.</p>
+    <nav class="page-hero-breadcrumb">
+      <a routerLink="/">Home</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,0.7)">About Us</span>
+    </nav>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     WHO WE ARE
+     ══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container who-grid">
+    <div class="who-visual">
+      <div class="who-circle">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="who-svg">
+          <circle cx="100" cy="100" r="98" stroke="rgba(184,134,27,0.25)" stroke-width="2"/>
+          <circle cx="100" cy="100" r="80" fill="rgba(184,134,27,0.06)"/>
+          <!-- Key icon large -->
+          <circle cx="72" cy="82" r="28" stroke="#B8861B" stroke-width="4" fill="none"/>
+          <circle cx="72" cy="82" r="14" fill="rgba(184,134,27,0.12)"/>
+          <circle cx="72" cy="82" r="6" fill="#B8861B"/>
+          <line x1="98" y1="82" x2="138" y2="82" stroke="#B8861B" stroke-width="4" stroke-linecap="round"/>
+          <line x1="130" y1="82" x2="130" y2="100" stroke="#B8861B" stroke-width="4" stroke-linecap="round"/>
+          <line x1="118" y1="82" x2="118" y2="94" stroke="#B8861B" stroke-width="4" stroke-linecap="round"/>
+          <!-- Year badge -->
+          <rect x="60" y="128" width="80" height="32" rx="8" fill="#B8861B"/>
+          <text x="100" y="149" font-family="serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Est. 1989</text>
+        </svg>
+      </div>
+      <div class="who-stat-card">
+        <span class="who-stat-num">35+</span>
+        <span class="who-stat-lbl">Years of Service</span>
+      </div>
+    </div>
+
+    <div class="who-content">
+      <span class="section-label">Who We Are</span>
+      <h2>Dubai's Premier <span class="title-accent">Locksmith Company</span></h2>
+      <div class="gold-divider" style="margin: 1.25rem 0"></div>
+
+      <p>
+        Golden Key Lock Repairing EST is a professional locksmith company established since <strong>1989 in Karama, Dubai</strong>.
+        We provide exceptional, complete locksmith services to clients in dire need across the UAE.
+      </p>
+      <p>
+        We have been serving our teaming clients in Dubai and its environs as their top-tier, go-to locksmith company for
+        about three decades. Our unparalleled experience cannot be matched — Golden Key and our technicians are
+        <strong>insured and fully licensed</strong>, so our clients could have absolute trust in us.
+      </p>
+      <p>
+        As a company, we are dedicated to providing efficient and quality service at an affordable price. We are known for
+        our swift response and efficient service delivery. Our commitment to quality sets us apart from other locksmith businesses.
+      </p>
+
+      <div class="who-stats">
+        <div class="who-stat">
+          <strong>10,000+</strong>
+          <span>Happy Customers</span>
+        </div>
+        <div class="who-stat">
+          <strong>24 / 7</strong>
+          <span>Emergency Service</span>
+        </div>
+        <div class="who-stat">
+          <strong>100%</strong>
+          <span>Licensed & Insured</span>
+        </div>
+      </div>
+
+      <a routerLink="/services" class="btn btn-gold" style="margin-top:1rem">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     VISION & MISSION
+     ══════════════════════════════════════════ -->
+<section class="vm-section section-sm">
+  <div class="container vm-grid">
+    <div class="vm-card vm-vision">
+      <div class="vm-icon">👁️</div>
+      <h3>Our Vision</h3>
+      <p>
+        To provide unbeatable customer service and quality performance for all locksmith needs in a bid to help
+        our customers feel a sense of security and relief.
+      </p>
+    </div>
+    <div class="vm-card vm-mission">
+      <div class="vm-icon">🎯</div>
+      <h3>Our Mission</h3>
+      <p>
+        To offer fast, friendly, and reliable services to clients so that we can make a lasting impact on their lives —
+        available every hour of every day.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CORE VALUES
+     ══════════════════════════════════════════ -->
+<section class="section values-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Stand For</span>
+      <h2>Our <span class="title-accent">Core Values</span></h2>
+      <div class="gold-divider"></div>
+      <p>Four pillars that have guided every lock we've fixed, every key we've cut, since 1989.</p>
+    </div>
+
+    <div class="values-grid">
+      @for (val of coreValues; track val.title; let i = $index) {
+        <div class="value-card" [style.animation-delay]="(i * 0.12) + 's'">
+          <div class="value-icon">{{ val.icon }}</div>
+          <h3>{{ val.title }}</h3>
+          <p>{{ val.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TIMELINE
+     ══════════════════════════════════════════ -->
+<section class="section timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Journey</span>
+      <h2>35 Years of <span class="title-accent">Excellence</span></h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="timeline">
+      @for (m of milestones; track m.year; let i = $index) {
+        <div class="timeline-item" [class.right]="i % 2 !== 0">
+          <div class="timeline-content">
+            <span class="timeline-year">{{ m.year }}</span>
+            <p>{{ m.event }}</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     NOTABLE CLIENTS
+     ══════════════════════════════════════════ -->
+<section class="section clients-about-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Clients</span>
+      <h2>Notable <span class="title-accent">Clients</span></h2>
+      <div class="gold-divider"></div>
+      <p>The quality service we offer over the long years of our existence has featured us working with some of Dubai's most high-rated clients.</p>
+    </div>
+    <div class="clients-list">
+      @for (c of clients; track c; let i = $index) {
+        <div class="client-card">
+          <div class="client-num">0{{ i + 1 }}</div>
+          <span>{{ c }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
