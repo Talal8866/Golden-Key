@@ -16,7 +16,7 @@ export class Services {
       title: 'Car Opening',
       tagline: 'Locked out? We\'re on our way.',
       icon: '🚗',
-      image: '/images/car-opening.jpg',
+      image: '/images/car-opening.webp',
       imageAlt: 'Locksmith opening a car door using professional tools',
       desc: `Locked out of your car? Our roadside technicians will be at your rescue in no time.
              Equipped with innovative tools and gadgets, they will open your vehicle without
@@ -28,7 +28,7 @@ export class Services {
       title: 'Car Key Programming',
       tagline: 'Lost your car key? We\'ll make a new one.',
       icon: '🔑',
-      image: '/images/programing.png',
+      image: '/images/programing.webp',
       imageAlt: 'Assorted car key remotes and transponder keys at Golden Key Dubai',
       desc: `With the innovative tools we possess, we fabricate and program a new car key for your
              vehicle. The new key carries out all the functions of the original — including
@@ -40,7 +40,7 @@ export class Services {
       title: 'Lock Installation',
       tagline: 'Secure your space with expert fitting.',
       icon: '🔒',
-      image: '/images/installation.png',
+      image: '/images/installation.webp',
       imageAlt: 'High security door lock installation by professional locksmith',
       desc: `We install secure locks for your doors, safes, and more. We make it easy for you
              to secure your valuables without putting you under any pressure, while making it
@@ -52,7 +52,7 @@ export class Services {
       title: 'Safe Box Opening',
       tagline: 'Can\'t open your safe? We can.',
       icon: '🗄️',
-      image: '/images/safe.jpg',
+      image: '/images/safe.webp',
       imageAlt: 'Combination safe box being opened by professional locksmith',
       desc: `Is opening your safe box becoming too complicated? Golden Key Repairing EST is here
              to assist you in opening any safe deposit box to retrieve your valuable items —
@@ -64,7 +64,7 @@ export class Services {
       title: 'Residential Door Opening',
       tagline: 'Locked out of your home? Call us.',
       icon: '🏠',
-      image: '/images/residential.png',
+      image: '/images/residential.webp',
       imageAlt: 'Residential door lock replacement and opening service in Dubai',
       desc: `We offer unlock services for residential apartments and villas. We change residential
              locks and keys, sell, install, and service a wide variety of residential locks.
@@ -76,7 +76,7 @@ export class Services {
       title: 'Electronic Locks & Access',
       tagline: 'Modern security for the modern world.',
       icon: '💳',
-      image: '/images/smartlock.jpg',
+      image: '/images/smartlock.webp',
       imageAlt: 'Electronic lock and access card system installation in Dubai',
       desc: `Our shop stocks access cards, parking remotes, parking cards, electronic locks, master
              key systems, smart keys, car remotes, and missing high-security door keys.
