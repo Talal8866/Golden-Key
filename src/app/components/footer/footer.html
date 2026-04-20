@@ -1,44 +1,48 @@
-<!-- Emergency CTA Band -->
-<div class="footer-cta-band">
-  <div class="container cta-band-inner">
-    <div class="cta-band-text">
-      <span class="cta-band-label">24 / 7 Emergency Service</span>
-      <h3>Locked out? We're always ready to help.</h3>
-    </div>
-    <div class="cta-band-actions">
-      <a href="tel:0506512422" class="btn btn-gold">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        Call 0506512422
-      </a>
-      <a href="tel:0507751708" class="btn btn-outline">
-        Call 0507751708
-      </a>
-    </div>
-  </div>
-</div>
-
 <!-- Main Footer -->
-<footer class="footer">
+<footer class="footer" itemscope itemtype="https://schema.org/Locksmith">
   <div class="container footer-grid">
 
-    <!-- Brand column -->
+    <!-- Brand Column -->
     <div class="footer-col footer-brand">
-      <a routerLink="/" class="footer-logo">
-        <div class="footer-logo-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm0 7.5c-1.379 0-2.5-1.121-2.5-2.5S10.621 4.5 12 4.5 14.5 5.621 14.5 7 13.379 9.5 12 9.5z" fill="#B8861B"/>
-            <rect x="10" y="12" width="4" height="8" rx="1" fill="rgba(255,255,255,0.8)"/>
-            <rect x="9" y="17" width="2.5" height="1.5" rx="0.5" fill="#B8861B"/>
-          </svg>
-        </div>
+      <a routerLink="/" class="footer-logo" itemprop="url" aria-label="Golden Key Lock Repairing EST - Home">
+        <img
+          src="/images/logo.jpeg"
+          alt="Golden Key Lock Repairing EST"
+          class="footer-logo-img"
+          width="56"
+          height="56"
+          loading="lazy"
+          itemprop="image"
+        >
         <div>
-          <span class="footer-logo-main">GOLDEN<span>KEY</span></span>
+          <span class="footer-logo-main" itemprop="name">GOLDEN<span>KEY</span></span>
           <span class="footer-logo-sub">Lock Repairing EST</span>
         </div>
       </a>
-      <p class="footer-tagline">
-        Dubai's most trusted locksmith company since 1989. Available 24/7 for all your lock and key emergencies.
+      <p class="footer-tagline" itemprop="description">
+        Dubai's most trusted locksmith since 1989. Available 24/7 for all your lock and key emergencies across Dubai.
       </p>
+
+      <!-- Social Media -->
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/1BQcrA8KmM/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Follow us on Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/goldenkey89" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Follow us on Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a href="https://x.com/goldenkey89" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Follow us on X (Twitter)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X (Twitter)
+        </a>
+        <a href="https://www.snapchat.com/add/goldenkey89" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Follow us on Snapchat">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.165-.015h-.135c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.15-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></svg>
+          Snapchat
+        </a>
+      </div>
+
       <div class="footer-badges">
         <span class="badge">✓ Insured</span>
         <span class="badge">✓ Licensed</span>
@@ -49,68 +53,78 @@
     <!-- Quick Links -->
     <div class="footer-col">
       <h4 class="footer-col-title">Quick Links</h4>
-      <div class="footer-links">
+      <ul class="footer-links" role="list">
         @for (link of quickLinks; track link.path) {
-          <div>
+          <li>
             <a [routerLink]="link.path" class="footer-link">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
               {{ link.label }}
             </a>
-          </div>
+          </li>
         }
-      </div>
+      </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-col">
       <h4 class="footer-col-title">Our Services</h4>
-      <div class="footer-links">
+      <ul class="footer-links" role="list">
         @for (svc of services; track svc) {
-          <div>
+          <li>
             <a routerLink="/services" class="footer-link">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
               {{ svc }}
             </a>
-          </div>
+          </li>
         }
-      </div>
+      </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-col">
       <h4 class="footer-col-title">Get In Touch</h4>
-      <ul class="footer-contact-list">
+      <ul class="footer-contact-list" itemscope itemtype="https://schema.org/PostalAddress">
         <li class="footer-contact-item">
-          <div class="contact-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          </div>
-          <span>Next to Families Supermarket,<br>Al Kwuait Street - Al Karama,<br>Dubai, U.A.E.</span>
+          <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <a href="https://maps.app.goo.gl/k62D6DB4zTfERHJKA" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <span itemprop="streetAddress">Next to Families Supermarket,<br>Al Kwuait Street - Al Karama,</span><br>
+            <span itemprop="addressLocality">Dubai</span>, <span itemprop="addressCountry">U.A.E.</span>
+          </a>
         </li>
         <li class="footer-contact-item">
-          <div class="contact-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          </div>
+          <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
           <div>
-            <a href="tel:0506512422" class="contact-link">0506512422</a><br>
-            <a href="tel:0507751708" class="contact-link">0507751708</a><br>
+            <a href="tel:0506512422" class="contact-link" itemprop="telephone">0506512422</a><br>
+            <a href="tel:0507751708" class="contact-link" itemprop="telephone">0507751708</a><br>
             <a href="tel:043350177"  class="contact-link">Landline: 043350177</a>
           </div>
         </li>
         <li class="footer-contact-item">
-          <div class="contact-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </div>
-          <a href="mailto:goldenkey89@hotmail.com" class="contact-link">goldenkey89&#64;hotmail.com</a>
+          <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <a href="mailto:goldenkey89@hotmail.com" class="contact-link" itemprop="email">goldenkey89&#64;hotmail.com</a>
         </li>
       </ul>
     </div>
   </div>
 
-  <!-- Bottom bar -->
+  <!-- Bottom Bar -->
   <div class="footer-bottom">
     <div class="container bottom-inner">
       <p>© {{ currentYear }} Golden Key Lock Repairing EST. All rights reserved.</p>
-      <p class="footer-bottom-right">Serving Dubai since 1989</p>
+      <div class="footer-bottom-links">
+        <span class="footer-bottom-tag">Serving Dubai since 1989</span>
+        <div class="bottom-socials">
+          <a href="https://www.facebook.com/share/1BQcrA8KmM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="bottom-social-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/goldenkey89" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="bottom-social-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://x.com/goldenkey89" target="_blank" rel="noopener noreferrer" aria-label="X Twitter" class="bottom-social-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

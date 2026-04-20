@@ -3,23 +3,20 @@
   <div class="container page-hero-content">
     <span class="section-label">What We Offer</span>
     <h1>Our <span>Services</span></h1>
-    <p>Full-service locksmith solutions for vehicles, homes, and businesses — available 24 hours a day, 7 days a week across Dubai.</p>
-    <nav class="page-hero-breadcrumb">
-      <a routerLink="/">Home</a>
-      <span>›</span>
+    <p>Full-service locksmith solutions for vehicles, homes, and businesses — 24 hours a day, 7 days a week across Dubai.</p>
+    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb">
+      <a routerLink="/">Home</a><span>›</span>
       <span class="Our-Services">Our Services</span>
     </nav>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     SERVICE OVERVIEW BAND
-     ══════════════════════════════════════════ -->
-<div class="services-band">
+<!-- Quick-nav band -->
+<div class="services-band" role="navigation" aria-label="Service navigation">
   <div class="container services-band-inner">
     @for (svc of services; track svc.id) {
       <a [href]="'#' + svc.id" class="band-item">
-        <span class="band-icon">{{ svc.icon }}</span>
+        <span class="band-icon" aria-hidden="true">{{ svc.icon }}</span>
         <span>{{ svc.title }}</span>
       </a>
     }
@@ -27,43 +24,54 @@
 </div>
 
 <!-- ══════════════════════════════════════════
-     SERVICE DETAIL CARDS
+     SERVICE DETAIL CARDS — with real images
      ══════════════════════════════════════════ -->
-<section class="section services-detail-section">
+<section class="section services-detail-section" aria-label="Service details">
   <div class="container">
     @for (svc of services; track svc.id; let i = $index) {
-      <article class="service-detail" [id]="svc.id" [class.reverse]="i % 2 !== 0">
+      <article class="service-detail" [id]="svc.id" [class.reverse]="i % 2 !== 0" itemscope itemtype="https://schema.org/Service">
 
+        <!-- Image side -->
         <div class="service-detail-visual">
-          <div class="svc-icon-circle">
-            <span class="svc-icon-big">{{ svc.icon }}</span>
+          <div class="svc-img-wrap">
+            <img
+              [src]="svc.image"
+              [alt]="svc.imageAlt"
+              class="svc-img"
+              loading="lazy"
+              width="480"
+              height="320"
+              itemprop="image"
+              alt="{{ svc.imageAlt }}"
+            >
+            <div class="svc-img-badge">
+              <span>{{ svc.icon }}</span>
+            </div>
           </div>
-          <div class="svc-number">0{{ i + 1 }}</div>
+          <div class="svc-number" aria-hidden="true">0{{ i + 1 }}</div>
         </div>
 
+        <!-- Text side -->
         <div class="service-detail-body">
-          <span class="svc-tagline">{{ svc.tagline }}</span>
-          <h2>{{ svc.title }}</h2>
+          <span class="svc-tagline" itemprop="slogan">{{ svc.tagline }}</span>
+          <h2 itemprop="name">{{ svc.title }}</h2>
           <div class="gold-divider gold-divider1"></div>
-          <p>{{ svc.desc }}</p>
+          <p itemprop="description">{{ svc.desc }}</p>
 
-          <div class="svc-features">
+          <ul class="svc-features" role="list">
             @for (f of svc.features; track f) {
-              <div class="svc-feature">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="feature-check">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                </svg>
+              <li class="svc-feature" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="feature-check" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                 {{ f }}
-              </div>
+              </li>
             }
-          </div>
+          </ul>
 
-          <a href="tel:0506512422" class="btn btn-gold a1">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:0506512422" class="btn btn-gold a1" [attr.aria-label]="'Book ' + svc.title + ' service'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             Book This Service
           </a>
         </div>
-
       </article>
     }
   </div>
@@ -72,27 +80,22 @@
 <!-- ══════════════════════════════════════════
      ROADSIDE ASSISTANCE
      ══════════════════════════════════════════ -->
-<section class="section roadside-section">
-  <div class="roadside-bg"></div>
+<section class="section roadside-section" aria-labelledby="roadside-heading">
+  <div class="roadside-bg" aria-hidden="true"></div>
   <div class="container roadside-inner">
     <div class="roadside-text">
       <span class="section-label section-label1">Roadside Assistance</span>
-      <h2 class="h22">We Offer <span class="headline-gold">Roadside Assistance</span></h2>
+      <h2 id="roadside-heading" style="color: white;">We Offer <span class="headline-gold">Roadside Assistance</span></h2>
       <div class="gold-divider gold-divider2"></div>
       <p class="p11">
-        Our team comprises highly trained professionals and technicians with several years of qualitative experience.
-        Our outside/roadside team are available <strong class="strong1">24/7</strong> to offer reliable lockout services
-        with ultimate opening technologies — <em>without scratching or damaging the vehicle</em>.
-      </p>
-      <p class="p22">
-        Some of the automotive companies we are in long-term relationship with:
+        Our team comprises highly trained professionals available <strong class="strong1">24/7</strong> to offer
+        reliable lockout services with ultimate opening technologies — without scratching or damaging the vehicle.
       </p>
     </div>
-
-    <div class="roadside-brands">
+    <div class="roadside-brands" role="list">
       @for (brand of roadsidePartners; track brand) {
-        <div class="brand-chip">
-          <svg class="svg1" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        <div class="brand-chip" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold)" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
           {{ brand }} <em>Roadside Assist</em>
         </div>
       }
@@ -103,31 +106,29 @@
 <!-- ══════════════════════════════════════════
      RETAIL ITEMS
      ══════════════════════════════════════════ -->
-<section class="section retail-section">
+<section class="section retail-section" aria-labelledby="retail-heading">
   <div class="container">
     <div class="section-header">
       <span class="section-label">In-Store</span>
-      <h2>Our <span class="title-accent">Retail Shop</span></h2>
+      <h2 id="retail-heading">Our <span class="title-accent">Retail Shop</span></h2>
       <div class="gold-divider"></div>
-      <p>Beyond mobile services, our Karama shop stocks a full range of security products and accessories.</p>
+      <p>Beyond mobile services, our Al Karama shop stocks a full range of security products.</p>
     </div>
-
-    <div class="retail-grid">
+    <div class="retail-grid" role="list">
       @for (item of [
         'Door Handles', 'Drawer Locks', 'Padlocks', 'Key Cutting Tools',
         'Car Keys', 'Car Remotes', 'Smart Keys', 'Key Chains',
         'Access Cards', 'Parking Remotes', 'Parking Cards', 'Electronic Locks',
         'Master Keys', 'High-Security Door Keys', 'Missing Car Keys', 'Key Duplicates'
       ]; track item) {
-        <div class="retail-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="retail-check"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        <div class="retail-item" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="retail-check" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
           {{ item }}
         </div>
       }
     </div>
-
     <div class="retail-cta">
-      <a routerLink="/contact" class="btn btn-gold">Visit Our Shop</a>
+      <a href="https://maps.app.goo.gl/k62D6DB4zTfERHJKA" target="_blank" rel="noopener noreferrer" class="btn btn-gold">📍 Visit Our Shop</a>
       <a routerLink="/service-area" class="btn btn-outline">View Service Area</a>
     </div>
   </div>

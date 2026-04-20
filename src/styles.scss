@@ -339,3 +339,62 @@ img {
 @for $i from 1 through 8 {
   .delay-#{$i} { animation-delay: #{$i * 0.1}s; }
 }
+
+/* ══════════════════════════════════════════
+   PERFORMANCE OPTIMIZATIONS
+   ══════════════════════════════════════════ */
+
+/* Lazy-loaded images: avoid layout shift (CLS) */
+img {
+  height: auto;
+  content-visibility: auto;
+}
+
+/* Prevent invisible text during font load */
+@font-face {
+  font-display: swap;
+}
+
+/* Reduce paint area for fixed elements */
+.navbar {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* GPU-accelerate animated elements */
+.hero-logo-img,
+.hero-badge-card,
+.shop-img,
+.service-card,
+.why-card,
+.area-card {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Skip to main content (accessibility + SEO) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--gold);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-sm) 0;
+  transition: top 0.2s;
+  &:focus { top: 0; }
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Remove focus outline for mouse users only */
+:focus:not(:focus-visible) {
+  outline: none;
+}
