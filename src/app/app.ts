@@ -8,7 +8,6 @@ import { Footer } from './components/footer/footer';
   standalone: true,
   imports: [RouterOutlet, Navbar, Footer],
   template: `
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <app-navbar />
     <main id="main-content">
       <router-outlet />

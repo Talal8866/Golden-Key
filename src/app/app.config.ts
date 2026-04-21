@@ -8,10 +8,12 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(
       routes,
-      withViewTransitions(),
+      // skipInitialTransition: true — fixes "InvalidStateError: Transition was aborted
+      // because of invalid state" caused by withViewTransitions() conflicting with SSR
+      // hydration (provideClientHydration) on the very first navigation.
+      withViewTransitions({ skipInitialTransition: true }),
       withInMemoryScrolling({ scrollPositionRestoration: 'top', anchorScrolling: 'enabled' })
     ),
     provideClientHydration(withEventReplay())
   ]
 };
-

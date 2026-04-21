@@ -41,7 +41,7 @@
   <meta property="og:image:alt" content="Golden Key Lock Repairing EST – Dubai locksmith shop in Al Karama">
   <meta property="og:locale" content="en_AE">
   <meta property="og:site_name" content="Golden Key Lock Repairing EST">
-  <meta property="business:contact_data:street_address" content="Next to Families Supermarket, Al Kwuait Street">
+  <meta property="business:contact_data:street_address" content="Next to Life Pharmacy, Al Kwuait Street">
   <meta property="business:contact_data:locality" content="Al Karama, Dubai">
   <meta property="business:contact_data:country_name" content="United Arab Emirates">
   <meta property="business:contact_data:phone_number" content="+971506512422">
@@ -72,10 +72,10 @@
     font-src 'self' https://fonts.gstatic.com data:;
     img-src 'self' data: blob: https://images.unsplash.com https://maps.googleapis.com https://maps.gstatic.com https://lh3.googleusercontent.com https://*.ggpht.com;
     frame-src https://www.google.com https://maps.google.com;
-    connect-src 'self';
+    connect-src 'self' https://formspree.io;
     object-src 'none';
     base-uri 'self';
-    form-action 'self';
+    form-action 'self' https://formspree.io;
   ">
 
   <!-- ════════════════════════════════════════
@@ -99,7 +99,7 @@
     "foundingDate": "1989",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Next to Families Supermarket, Al Kwuait Street",
+      "streetAddress": "Next to Life Pharmacy, Al Kwuait Street",
       "addressLocality": "Al Karama",
       "addressRegion": "Dubai",
       "postalCode": "",
@@ -193,18 +193,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <!-- Preload hero image (LCP optimization) -->
-  <link rel="preload" as="image" href="/images/shop-exterior-2.jpg" fetchpriority="high">
-  <!-- Preload logo -->
-  <link rel="preload" as="image" href="/images/logo.jpeg">
+
+  <!--
+    WHY NO <link rel="preload"> FOR IMAGES HERE:
+    ─────────────────────────────────────────────
+    Preloading images via <link rel="preload"> only works when the browser
+    can match the preload to an actual resource request. There are two cases
+    where the match FAILS and the browser fires a "preloaded but not used" warning:
+
+    1. CSS background-image  → browser can't link preload to a CSS url() reference.
+       The hero BG is a CSS background; preloading it here does nothing.
+       Fix: hero BG is now a real <img> tag (position:absolute) in the component —
+            fetchpriority="high" is set directly on that <img>, which is the correct LCP API.
+
+    2. Angular lazy-loaded components → Angular bootstraps after this HTML is parsed.
+       Any <img> inside a lazy-loaded component is not in the DOM yet, so the browser
+       marks the preloaded resource as "unused" and wastes the early network slot.
+       Fix: fetchpriority="high" + loading="eager" on the <img> itself (already done).
+
+    Both fixes are applied in home.component.html and navbar.component.html.
+    Do NOT add preload tags here for Angular component images.
+  -->
+
   <!-- Google Fonts – display=swap prevents render-blocking -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Nunito:wght@300;400;500;600;700&display=swap">
 
   <!-- ════════════════════════════════════════
        FAVICON (inline SVG)
        ════════════════════════════════════════ -->
-  <link rel="icon" type="image/jpeg" href="/images/logo.jpeg">
-  <link rel="apple-touch-icon" href="/images/logo.jpeg">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/images/logo.jpeg">
 </head>
 <body>
   <app-root></app-root>
