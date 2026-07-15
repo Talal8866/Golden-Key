@@ -1,4 +1,4 @@
-# Golden Key Lock Repairing EST — Angular Website v2
+# Golden Key Locks Repairing Establishment — Angular Website v2
 
 Full 5-page production Angular 20 website. Version 2 includes real photos, social media, full SEO, security hardening, and performance optimizations.
 
@@ -6,16 +6,10 @@ Full 5-page production Angular 20 website. Version 2 includes real photos, socia
 
 ## Quick Start (3 commands)
 
-```bash
-# 1. Copy all files from this folder into your existing Angular project root
-#    (merge/overwrite — keep your package.json and node_modules)
-
-# 2. Verify angular.json has:  "styles": ["src/styles.scss"],  "inlineStyleLanguage": "scss"
-
-# 3. Serve
+# 1. Serve
 ng serve
 
-# Production build
+# 2.Production build
 ng build --configuration production
 ```
 
@@ -81,7 +75,7 @@ golden-key-angular/
 ```json
 {
   "@type": "Locksmith",
-  "name": "Golden Key Lock Repairing EST",
+  "name": "Golden Key Locks Repairing Establishment",
   "foundingDate": "1989",
   "openingHoursSpecification": "00:00–23:59 every day",
   "telephone": "+971506512422",
@@ -174,7 +168,7 @@ HTML files: no-cache (ensures fresh Angular router)
 
 | Platform | Handle | Link |
 |---|---|---|
-| Facebook | Golden Key Lock Repairing EST | https://www.facebook.com/share/1BQcrA8KmM/ |
+| Facebook | Golden Key Locks Repairing Establishment | https://www.facebook.com/share/1BQcrA8KmM/ |
 | Instagram | @goldenkey89 | https://www.instagram.com/goldenkey89 |
 | X (Twitter) | @goldenkey89 | https://x.com/goldenkey89 |
 | Snapchat | goldenkey89 | https://www.snapchat.com/add/goldenkey89 |

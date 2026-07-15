@@ -31,7 +31,7 @@ export class About {
   ];
  
   milestones = [
-    { year: '1989', event: 'Golden Key Lock Repairing EST founded in Karama, Dubai.' },
+    { year: '1989', event: 'Golden Key Locks Repairing Establishment founded in Karama, Dubai.' },
     { year: '2000', event: 'Expanded service fleet with dedicated mobile locksmith units.' },
     { year: '2010', event: 'Partnered with top automotive roadside assistance programs.' },
     { year: '2015', event: 'Introduced electronic lock, smart key & access card services.' },
