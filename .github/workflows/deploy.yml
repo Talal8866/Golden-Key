@@ -3,7 +3,7 @@ name: Build and Deploy to Hostinger
 on:
   push:
     branches:
-      - main # Triggers the deploy when you push to the main branch
+      - main
 
 jobs:
   web-deploy:
@@ -16,7 +16,7 @@ jobs:
     - name: ⚙️ Use Node.js
       uses: actions/setup-node@v4
       with:
-        node-node-version: '20' # Matches your local Node version
+        node-version: '22'
         cache: 'npm'
 
     - name: 📦 Install dependencies
@@ -31,7 +31,5 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        # Point this to your compiled Angular production folder:
         local-dir: ./dist/golden-key/browser/
-        # Uploads to the root folder on Hostinger:
         server-dir: /public_html/
