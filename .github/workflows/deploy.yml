@@ -32,4 +32,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/golden-key/browser/
-        server-dir: /home/u232228786/domains/goldenkeyuae.com/public_html/
+        server-dir: /domains/goldenkeyuae.com/public_html/
