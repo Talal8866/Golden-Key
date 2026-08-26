@@ -64,8 +64,8 @@ export class Contact {
       icon: 'location',
       label: 'Shop Address',
       lines: [
-        'Next to Life Pharmacy',
-        'Al Kwuait Street - Al Karama',
+        'Shop 34, Kuwait Street',
+        'Next to Life Pharmacy - Al Karama',
         'Dubai, U.A.E.',
       ],
       action: 'https://maps.app.goo.gl/k62D6DB4zTfERHJKA',
