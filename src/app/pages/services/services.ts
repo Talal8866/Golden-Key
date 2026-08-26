@@ -53,7 +53,7 @@ export class Services {
       icon: '🗄️',
       image: '/images/safe.webp',
       imageAlt: 'Combination safe box being opened by professional locksmith',
-      desc: `Is opening your safe box becoming too complicated? Golden Key Repairing EST is here
+      desc: `Is opening your safe box becoming too complicated? Golden Key Repairing Establishment is here
              to assist you in opening any safe deposit box to retrieve your valuable items —
              quickly, professionally, and without damage.`,
       features: ['All safe brands', 'Combination recovery', 'No safe damage', 'Confidential service'],
