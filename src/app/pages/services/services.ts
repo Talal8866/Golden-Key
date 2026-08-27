@@ -61,7 +61,7 @@ export class Services {
     {
       id: 'residential-door',
       title: 'Residential Door Opening',
-      tagline: 'Locked out of your home? Call us.',
+      tagline: 'Locked out of your home? Call Us.',
       icon: '🏠',
       image: '/images/residential.webp',
       imageAlt: 'Residential door lock replacement and opening service in Dubai',
